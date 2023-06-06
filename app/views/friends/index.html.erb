@@ -1,15 +1,14 @@
 <% if user_signed_in? %>
-  <p style="color: green"><%= notice %></p>
+
     <h1>Friends</h1>
     <div id="friends">
       <% @friends.each do |friend| %>
         <%= 'Name' %>: <%= link_to friend.firt_name + ' ' + friend.last_name, friend %>
         <p>
-          <%= 'Friend user id' %>: <%= friend.user_id %>
+          <%= 'Friend of:' %> <%= friend.user.email %>
         </p>
       <% end %>
     </div>
-  <%= link_to "Add new friend", new_friend_path %>
 <% else %>
   <%= render 'home/index' %>
 <% end %>
