@@ -1,15 +1,15 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Friends</h1>
-
-<div id="friends">
-  <% @friends.each do |friend| %>
-    <%= friend.firt_name %>
-    <p>
-      <%= link_to "Show this friend", friend %>
-    </p>
-  <% end %>
-</div>
-<% if user_signed_in? && current_user %>
-    <%= link_to "New friend", new_friend_path %>
+<% if user_signed_in? %>
+  <p style="color: green"><%= notice %></p>
+    <h1>Friends</h1>
+    <div id="friends">
+      <% @friends.each do |friend| %>
+        <%= 'Name' %>: <%= link_to friend.firt_name + ' ' + friend.last_name, friend %>
+        <p>
+          <%= 'Friend user id' %>: <%= friend.user_id %>
+        </p>
+      <% end %>
+    </div>
+  <%= link_to "Add new friend", new_friend_path %>
+<% else %>
+  <%= render 'home/index' %>
 <% end %>

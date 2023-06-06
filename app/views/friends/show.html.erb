@@ -5,7 +5,7 @@
 <div>
   <%= link_to "Back to friends", friends_path %>
 
-  <% if user_signed_in? && current_user %>
+  <% if user_signed_in? && @friend.user == current_user %>
     | <%= link_to "Edit this friend", edit_friend_path(@friend) %>
     | <%= button_to "Delete this friend", @friend, method: :delete %>
   <% end %>
