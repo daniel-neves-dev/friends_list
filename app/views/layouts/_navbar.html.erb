@@ -1,11 +1,10 @@
 <div>
   <%= link_to 'Friend App', root_url %> |
-  <%= link_to 'About', home_about_url %> |
-  <%= link_to 'Friends', friends_url %>
   <% if user_signed_in? && current_user %>
-    <%= link_to 'Add friend', new_friend_url %> |
-    <%= button_to 'log out', destroy_user_session_url, method: :delete %> |
+    <%= current_user.email %> |
+    <%= link_to 'Add new friend', new_friend_url %> |
     <%= link_to 'Edit profile', edit_user_registration_path %> |
+    <%= button_to 'log out', destroy_user_session_url, method: :delete %>
   <% else %>
     <%= link_to 'Sign Up', new_user_registration_path %> |
     <%= link_to 'Log in', new_user_session_path %> |
