@@ -3,8 +3,10 @@
 <%= render @friend %>
 
 <div>
-  <%= link_to "Edit this friend", edit_friend_path(@friend) %> |
   <%= link_to "Back to friends", friends_path %>
 
-  <%= button_to "Delete this friend", @friend, method: :delete %>
+  <% if user_signed_in? && current_user %>
+    | <%= link_to "Edit this friend", edit_friend_path(@friend) %>
+    | <%= button_to "Delete this friend", @friend, method: :delete %>
+  <% end %>
 </div>
