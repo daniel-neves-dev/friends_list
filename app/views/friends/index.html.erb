@@ -4,9 +4,13 @@
 
 <div id="friends">
   <% @friends.each do |friend| %>
-    <%= link_to friend.first_name + ' ' + friend.last_name, friend %>
-  <% end %>
-</div><br />
+  <tb>
+    <li><br/>
+        <%= link_to (friend.first_name.capitalize + ' ' + friend.last_name.capitalize), friend %>
+      <% end %>
+    </li>
+  </tb>
+</div><br /><br />
 
 <div>
   <%= link_to "New friend", new_friend_path %>
