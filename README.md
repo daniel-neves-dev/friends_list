@@ -4,5 +4,5 @@ A simple ruby on rails projetict for leaning and pratice
 
 * Ruby version 3.1.4
 
-* Raisl version 7.0.5
+* Rails version 7.0.5
 
