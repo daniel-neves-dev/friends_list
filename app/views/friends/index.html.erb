@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Friends</h1>
+
+<div id="friends">
+  <% @friends.each do |friend| %>
+  <tb>
+    <li><br/>
+        <%= link_to (friend.first_name.capitalize + ' ' + friend.last_name.capitalize), friend %>
+      <% end %>
+    </li>
+  </tb>
+</div><br /><br />
+
+<div>
+  <%= link_to "New friend", new_friend_path %>
+</div>
+
