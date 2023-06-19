@@ -1,12 +1,12 @@
-<h1>Home</h1>
-<%= link_to 'Friend list', friends_url %>
+<h1><%= t 'home.title' %></h1>
+<%= link_to t('home.friends_list'), friends_url %>
 <div><br />
   <% if user_signed_in? %>
-    <%= link_to 'Edit profile', edit_user_registration_path %> <strong>|</strong>
-    <%= button_to 'Log out', destroy_user_session_path, method: :delete %> <strong>|</strong>
+    <%= link_to t('home.edit_profile'), edit_user_registration_path %> <strong>|</strong>
+    <%= button_to t('home.log_out'), destroy_user_session_path, method: :delete %> <strong>|</strong>
   <% else %>
-    <%= link_to 'Sign up!',new_user_registration_path %> <strong>|</strong>
-    <%= link_to 'Log in',user_session_path %> <strong>|</strong>
+    <%= link_to t('home.sign_up'),new_user_registration_path %> <strong>|</strong>
+    <%= link_to t('home.log_in'),user_session_path %> <strong>|</strong>
   <% end %>
 </div>
 

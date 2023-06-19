@@ -1,0 +1,8 @@
+pt-BR:
+  home:
+    title: "Página inicial"
+    friends_list: "Lista de amigos"
+    edit_profile: "Editar perfil"
+    log_out: "Sair"
+    sign_up: "Assinar!"
+    log_in: "Entrar"
