@@ -1,9 +1,9 @@
 <%= render @friend %>
 
 <div>
-  <%= link_to "Edit this friend", edit_friend_path(@friend) %> |
-  <%= link_to "Back to friends", friends_path %>
+  <%= link_to t('show.edit_friend'), edit_friend_path(@friend) %> |
+  <%= link_to t('show.back_friends'), friends_path %>
 
-  <%= button_to "Destroy this friend", @friend, method: :delete,
-                form: { data: { turbo_confirm: 'Are you sure?' } }%>
+  <%= button_to t('show.destroy_friend'), @friend, method: :delete,
+                form: { data: { turbo_confirm: t('show.confirmation') } }%>
 </div>

@@ -1,0 +1,6 @@
+pt-BR:
+  show:
+    edit_friend: "Editar perfil deste amigo"
+    back_friends: "Voltar para lista de amigos"
+    destroy_friend: "Deletar este amigo"
+    confirmation: "Deletar amigo?"
