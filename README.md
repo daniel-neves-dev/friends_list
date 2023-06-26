@@ -6,3 +6,5 @@ A simple ruby on rails projetict for leaning and pratice
 
 * Rails version 7.0.5
 
+* On terminal type 'rails s' to work on local host
+
